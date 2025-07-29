@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function AboutSection() {
   return (
-    <section className="py-20 px-4 bg-white dark:bg-black text-gray-900 dark:text-white">
+    <section id="home" className="py-20 px-4 bg-white dark:bg-black text-gray-900 dark:text-white">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
         <div className="flex-shrink-0">
           <Image

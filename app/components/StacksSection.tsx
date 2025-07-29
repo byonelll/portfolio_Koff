@@ -61,31 +61,31 @@ const stacks = [
 
 export default function StacksSection() {
   return (
-    <section className="bg-gray-50 py-20 px-6">
+    <section className="bg-gray-50 dark:bg-gray-900 py-20 px-6">
       <div className="max-w-7xl mx-auto text-center">
-         <span className="bg-gray-900 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
+        <span className="bg-gray-900 dark:bg-gray-800 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
           Compétences 
         </span> <br /> <br />
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">Mes Stacks & Outils</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-16">
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Mes Stacks & Outils</h2>
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-16">
           Ingénierie logicielle ou création digitale : je m’appuie sur les technologies et les
           outils les plus récentes et fais évoluer mes compétences en continu pour rester à la
           pointe de l’innovation.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
-  {stacks.map((category) => (
-    <div key={category.title}>
-      <h3 className="font-semibold text-lg mb-4 text-blue-900">{category.title}</h3>
-      <ul className="space-y-3">
-        {category.items.map((tool) => (
-          <li
-            key={tool.name}
-            className="flex items-center bg-white rounded-md shadow-sm px-3 py-2 hover:shadow-md transition"
-          >
-            <span className="text-xl text-blue-500 mr-3">{tool.icon}</span>
-            <span className="text-base text-gray-900 font-medium">{tool.name}</span>
-          </li>
+          {stacks.map((category) => (
+            <div key={category.title}>
+              <h3 className="font-semibold text-lg mb-4 text-blue-900 dark:text-blue-300">{category.title}</h3>
+              <ul className="space-y-3">
+                {category.items.map((tool) => (
+                  <li
+                    key={tool.name}
+                    className="flex items-center bg-white dark:bg-gray-800 rounded-md shadow-sm px-3 py-2 hover:shadow-md transition"
+                  >
+                    <span className="text-xl text-blue-500 mr-3">{tool.icon}</span>
+                    <span className="text-base text-gray-900 dark:text-gray-100 font-medium">{tool.name}</span>
+                  </li>
                 ))}
               </ul>
             </div>

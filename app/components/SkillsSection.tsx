@@ -92,8 +92,8 @@ function GitHubActivity() {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-6 col-span-2">
-      <h3 className="font-semibold mb-4 flex items-center gap-2">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 col-span-2">
+      <h3 className="font-semibold mb-4 flex items-center gap-2 text-gray-900 dark:text-white">
         <span className="text-blue-500">↗</span> Activité GitHub
       </h3>
       <div className="flex justify-center">
@@ -106,13 +106,13 @@ function GitHubActivity() {
                   ? "bg-blue-600"
                   : value > 0.4
                   ? "bg-blue-300"
-                  : "bg-gray-200"
+                  : "bg-gray-200 dark:bg-gray-700"
               }`}
             />
           ))}
         </div>
       </div>
-      <p className="text-xs text-gray-400 mt-3">
+      <p className="text-xs text-gray-400 dark:text-gray-300 mt-3">
         Dernière contribution le vendredi 25 juillet 2025
       </p>
     </div>
@@ -121,12 +121,12 @@ function GitHubActivity() {
 
 export default function SkillsSection() {
   return (
-    <section className="bg-gray-50 py-16 text-gray-800">
+    <section className="bg-gray-50 dark:bg-gray-900 py-16 text-gray-800 dark:text-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-         {/* Ajout du titre et du sous-titre */}
+        {/* Ajout du titre et du sous-titre */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-extrabold mb-4">Welcome to my universe</h1>
-          <p className="text-lg text-gray-500">
+          <h1 className="text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Welcome to my universe</h1>
+          <p className="text-lg text-gray-500 dark:text-gray-300">
             Quelques statistiques pour vous donner un aperçu de mon profil.
           </p>
         </div>
@@ -134,25 +134,25 @@ export default function SkillsSection() {
           {/* Colonne 1 */}
           <div className="flex flex-col gap-6">
             {/* Expertise Technique */}
-            <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col gap-8">
-              <h3 className="font-semibold mb-2 flex items-center gap-2">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 flex flex-col gap-8">
+              <h3 className="font-semibold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
                 <span className="text-blue-500">⚡</span> Expertise Technique
               </h3>
               <div className="flex gap-6 justify-center">
                 <div className="flex flex-col items-center">
-                  <div className="bg-gray-50 rounded-xl p-4">
+                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4">
                     <ProgressCircle value={95} />
                   </div>
                   <div className="text-center mt-2">
-                    <div className="font-bold">Frontend</div>
+                    <div className="font-bold text-gray-900 dark:text-white">Frontend</div>
                   </div>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="bg-gray-50 rounded-xl p-4">
+                  <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4">
                     <ProgressCircle value={85} />
                   </div>
                   <div className="text-center mt-2">
-                    <div className="font-bold">Backend</div>
+                    <div className="font-bold text-gray-900 dark:text-white">Backend</div>
                   </div>
                 </div>
               </div>
@@ -176,12 +176,12 @@ export default function SkillsSection() {
             </div>
 
             {/* Langues & Soft Skills */}
-            <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col gap-6">
-              <h3 className="font-semibold mb-2 flex items-center gap-2">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 flex flex-col gap-6">
+              <h3 className="font-semibold mb-2 flex items-center gap-2 text-gray-900 dark:text-white">
                 <span className="text-blue-500">›</span> Langues & Soft Skills
               </h3>
               <div>
-                <div className="font-medium mb-1">Langues</div>
+                <div className="font-medium mb-1 text-gray-900 dark:text-white">Langues</div>
                 <div className="flex items-center gap-2">
                   Français
                   <LangDots level={5} />
@@ -192,12 +192,12 @@ export default function SkillsSection() {
                 </div>
               </div>
               <div>
-                <div className="font-medium mb-1 mt-2">Soft Skills</div>
+                <div className="font-medium mb-1 mt-2 text-gray-900 dark:text-white">Soft Skills</div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">Communication</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">Leadership</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">Travail d'équipe</span>
-                  <span className="bg-gray-100 px-3 py-1 rounded-full text-xs">Résolution de problèmes</span>
+                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Communication</span>
+                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Leadership</span>
+                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Travail d'équipe</span>
+                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Résolution de problèmes</span>
                 </div>
               </div>
             </div>
@@ -206,25 +206,25 @@ export default function SkillsSection() {
           {/* Colonne 2 */}
           <div className="flex flex-col gap-6">
             {/* Statistiques projets */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="font-semibold mb-4">📊 Statistiques de projets</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">📊 Statistiques de projets</h3>
               <div className="text-3xl font-bold text-blue-600">+67</div>
               <p className="text-sm text-green-500 mb-4">+12% depuis l’année dernière</p>
-              <div className="text-sm mb-2">Sites web & apps : 65%</div>
+              <div className="text-sm mb-2 text-gray-900 dark:text-gray-100">Sites web & apps : 65%</div>
               <Progress value={65} />
-              <div className="text-sm mt-4 mb-2">Apps mobiles : 25%</div>
+              <div className="text-sm mt-4 mb-2 text-gray-900 dark:text-gray-100">Apps mobiles : 25%</div>
               <Progress value={25} />
-              <div className="text-sm mt-4 mb-2">Autres projets : 10%</div>
+              <div className="text-sm mt-4 mb-2 text-gray-900 dark:text-gray-100">Autres projets : 10%</div>
               <Progress value={10} />
             </div>
 
             {/* Certifications */}
-            <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="font-semibold mb-4">🎓 Certifications</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
+              <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">🎓 Certifications</h3>
               <span className="text-xs text-white bg-blue-500 px-2 py-1 rounded-full mb-3 inline-block">
                 En continu
               </span>
-              <ul className="text-sm space-y-2">
+              <ul className="text-sm space-y-2 text-gray-900 dark:text-gray-100">
                 <li>GomyCode – Bootcamp Node JS</li>
                 <li>LinkedIn Learning – React JS</li>
                 <li>LinkedIn Learning – Data Analysis</li>

@@ -1,23 +1,13 @@
-import { FaCalendarAlt, FaVideo, FaNewspaper, FaHome, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaNewspaper, FaGithub } from "react-icons/fa";
 import { HiOutlineHome } from "react-icons/hi";
 import { MdOutlineMail } from "react-icons/md";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 pb-32">
-      <div className="text-center text-gray-500 mb-4">
-         by <span className="font-semibold">Angenor Koffi</span>
-      </div>
-      <div className="flex justify-center gap-8 mb-8 text-gray-600">
-        <a href="tel:+123456789" className="flex items-center gap-2 hover:text-blue-600 transition">
-          <FaCalendarAlt /> Call
-        </a>
-        <a href="#" className="flex items-center gap-2 hover:text-blue-600 transition">
-          <FaVideo /> Vidéothèque
-        </a>
-        <a href="#" className="flex items-center gap-2 hover:text-blue-600 transition">
-          <FaNewspaper /> My Substack
-        </a>
+    <footer className="relative mt-24 bg-gray-950 py-16">
+      {/* Texte du footer, bien visible et au-dessus de la barre flottante */}
+      <div className="text-center text-gray-100 text-xl font-semibold tracking-wide mb-20">
+        La sueur épargnera toujours le sang by <span className="text-blue-400">Angenor Koffi</span>
       </div>
       {/* Barre de navigation flottante */}
       <div className="fixed left-1/2 bottom-8 -translate-x-1/2 z-50">

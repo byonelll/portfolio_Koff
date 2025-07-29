@@ -17,8 +17,8 @@ const testimonials = [
   },
   {
     avatar: "/avatar-temoin2.jpg",
-    name: "Sophie Martin",
-    username: "@sophie_martin",
+    name: "Angy moroccoLocks",
+    username: "@morocco_Locks",
     date: "3j",
     message: (
       <>
@@ -61,13 +61,13 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
-        <span className="bg-gray-900 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
+        <span className="bg-gray-900 dark:bg-gray-800 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
           Témoignages
         </span>
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">Ce qu'ils en pensent</h2>
-        <p className="text-xl text-gray-500 text-center mb-16 max-w-2xl">
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Ce qu'ils en pensent</h2>
+        <p className="text-xl text-gray-500 dark:text-gray-300 text-center mb-16 max-w-2xl">
           Quelques retours d'expérience de mes clients et partenaires. Leur satisfaction est ma plus grande récompense et témoigne de mon engagement à délivrer des solutions de qualité.
         </p>
 
@@ -77,25 +77,25 @@ export default function TestimonialsSection() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl shadow-lg p-8 min-w-[340px] max-w-[380px] flex flex-col gap-4 items-start"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-w-[340px] max-w-[380px] flex flex-col gap-4 items-start"
               >
                 <div className="flex items-center gap-4">
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="w-14 h-14 rounded-full object-cover border border-gray-200"
+                    className="w-14 h-14 rounded-full object-cover border border-gray-200 dark:border-gray-700"
                   />
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-lg">{t.name}</span>
+                      <span className="font-bold text-lg dark:text-white">{t.name}</span>
                       <FaCheckCircle className="text-blue-500" />
                     </div>
-                    <span className="text-gray-500">{t.username}</span>
+                    <span className="text-gray-500 dark:text-gray-300">{t.username}</span>
                   </div>
-                  <span className="ml-auto text-gray-400 text-sm">{t.date}</span>
+                  <span className="ml-auto text-gray-400 dark:text-gray-400 text-sm">{t.date}</span>
                 </div>
-                <div className="text-gray-800 text-lg">{t.message}</div>
-                <div className="flex items-center gap-8 mt-2 text-gray-400 text-base w-full">
+                <div className="text-gray-800 dark:text-gray-100 text-lg">{t.message}</div>
+                <div className="flex items-center gap-8 mt-2 text-gray-400 dark:text-gray-300 text-base w-full">
                   <span className="flex items-center gap-2"><FaComment /> {t.comments}</span>
                   <span className="flex items-center gap-2"><FaRetweet /> {t.retweets}</span>
                   <span className="flex items-center gap-2"><FaHeart /> {t.likes}</span>
