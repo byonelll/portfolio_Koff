@@ -1,3 +1,5 @@
+'use client';
+
 import { FaCheckCircle, FaComment, FaRetweet, FaHeart, FaShareAlt } from "react-icons/fa";
 
 const testimonials = [
@@ -36,7 +38,7 @@ const testimonials = [
     date: "5j",
     message: (
       <>
-        Un développeur à l’écoute, force de proposition et très réactif. Je recommande vivement <span className="font-semibold text-blue-700">@AngenorKoffi</span> pour tout projet digital. <span className="text-blue-600">#Design #Web</span>
+        J&apos;ai apprécié la réactivité et le professionnalisme d&apos;<span className="font-semibold text-blue-700">@AngenorKoffi</span>. Le résultat final correspondait parfaitement à nos attentes. <span className="text-blue-600">#Design #WebApp</span>
       </>
     ),
     comments: 9,
@@ -50,7 +52,7 @@ const testimonials = [
     date: "1 sem",
     message: (
       <>
-        Merci <span className="font-semibold text-blue-700">@AngenorKoffi</span> pour ton professionnalisme et ta disponibilité. Le projet a été mené avec sérieux et efficacité. <span className="text-blue-600">#Pro #Satisfaction</span>
+        Un accompagnement sur-mesure et une grande écoute. Merci <span className="font-semibold text-blue-700">@AngenorKoffi</span> pour ce beau projet ! <span className="text-blue-600">#Support #ProjetWeb</span>
       </>
     ),
     comments: 15,
@@ -66,9 +68,9 @@ export default function TestimonialsSection() {
         <span className="bg-gray-900 dark:bg-gray-800 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
           Témoignages
         </span>
-        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Ce qu'ils en pensent</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Ce qu&apos;ils en pensent</h2>
         <p className="text-xl text-gray-500 dark:text-gray-300 text-center mb-16 max-w-2xl">
-          Quelques retours d'expérience de mes clients et partenaires. Leur satisfaction est ma plus grande récompense et témoigne de mon engagement à délivrer des solutions de qualité.
+          Quelques retours d&apos;expérience de mes clients et partenaires. Leur satisfaction est ma plus grande récompense et témoigne de mon engagement à délivrer des solutions de qualité.
         </p>
 
         {/* Carrousel défilant */}
@@ -79,7 +81,7 @@ export default function TestimonialsSection() {
                 key={i}
                 className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-w-[340px] max-w-[380px] flex flex-col gap-4 items-start"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 w-full">
                   <img
                     src={t.avatar}
                     alt={t.name}

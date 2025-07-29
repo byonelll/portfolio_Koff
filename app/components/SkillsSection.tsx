@@ -196,7 +196,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Communication</span>
                   <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Leadership</span>
-                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Travail d'équipe</span>
+                  <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Travail d&apos;équipe</span>
                   <span className="bg-gray-100 dark:bg-gray-700 dark:text-gray-100 px-3 py-1 rounded-full text-xs">Résolution de problèmes</span>
                 </div>
               </div>
@@ -209,8 +209,8 @@ export default function SkillsSection() {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6">
               <h3 className="font-semibold mb-4 text-gray-900 dark:text-white">📊 Statistiques de projets</h3>
               <div className="text-3xl font-bold text-blue-600">+67</div>
-              <p className="text-sm text-green-500 mb-4">+12% depuis l’année dernière</p>
-              <div className="text-sm mb-2 text-gray-900 dark:text-gray-100">Sites web & apps : 65%</div>
+              <p className="text-sm text-green-500 mb-4">+12% depuis l&apos;année dernière</p>
+              <div className="text-sm mb-2 text-gray-900 dark:text-gray-100">Sites web &amp; apps : 65%</div>
               <Progress value={65} />
               <div className="text-sm mt-4 mb-2 text-gray-900 dark:text-gray-100">Apps mobiles : 25%</div>
               <Progress value={25} />
