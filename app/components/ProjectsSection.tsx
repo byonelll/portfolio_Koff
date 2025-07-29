@@ -3,7 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  images: string[];
+  demo: string;
+};
+
+const projects: Project[] = [
   {
     title: "Boutique d’achat en ligne – J2EE",
     description:
@@ -32,10 +40,10 @@ const projects = [
 
 export default function ProjectsSection() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [activeProject, setActiveProject] = useState<any>(null);
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const openModal = (project: any) => {
+  const openModal = (project: Project) => {
     setActiveProject(project);
     setCurrentImage(0);
     setModalOpen(true);
@@ -69,7 +77,7 @@ export default function ProjectsSection() {
           <br />
           <h2 className="text-4xl font-bold mb-2">Découvrez mes réalisations</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Une sélection de projets sur lesquels j'ai travaillé. Cliquez sur les cartes pour voir les images.
+            Une sélection de projets sur lesquels j&apos;ai travaillé. Cliquez sur les cartes pour voir les images.
           </p>
         </div>
 
