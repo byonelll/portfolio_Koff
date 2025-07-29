@@ -19,7 +19,7 @@ export default function HeroSection() {
 				>
 					<div className="space-y-5 mb-8">
 						<h1 className="text-4xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-500">
-							Diomandé Moustapha
+							Angenor Koffi
 						</h1>
 						<h2 className="text-2xl md:text-4xl font-semibold text-white leading-snug">
 							Ingénieur logiciel & créateur digital passionné par la cybersécurité, l'IA, le cloud et l'innovation.

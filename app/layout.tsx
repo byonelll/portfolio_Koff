@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Diomandé Adama - Un partenaire professionnel et dévoué pour concrétiser vos projets',
+  title: 'Angenor Koffi- Un partenaire professionnel et dévoué pour concrétiser vos projets',
   description:
     'Welcome to my portfolio! I am a passionate full-stack developer who bridges the gap between frontend and backend development. Specializing in creating complete web solutions, from beautiful user interfaces to robust server architectures.',
   keywords: [
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     'DevOps',
     'System Architecture',
     'Web Development',
-    'Diomandé Adama',
+    'Angenor Koffi',
   ],
-  authors: [{ name: 'Diomandé Adama' }],
-  creator: 'Diomandé Adama',
+  authors: [{ name: 'Angenor Koffi' }],
+  creator: 'Angenor Koffi',
   openGraph: {
-    title: 'Diomandé Adama - Full-Stack Developer Portfolio',
+    title: 'Angenor Koffi - Ingénieur Informatique',
     description:
       'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
     url: 'https://your-domain.com',
-    siteName: 'Diomandé Adama - Portfolio',
+    siteName: 'Angenor Koffi- Portfolio',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Diomandé Adama - Full-Stack Developer Portfolio',
+        alt: 'Angenor Koffi - Ingénieur Informatique Portfolio',
       },
     ],
     locale: 'en_US',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diomandé Adama - Full-Stack Developer',
+    title: 'Angenor Koffi- Ingénieur Informatique',
     description:
       'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
     creator: '@yourusername',

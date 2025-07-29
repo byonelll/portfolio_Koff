@@ -8,7 +8,7 @@ const testimonials = [
     date: "1j",
     message: (
       <>
-        Travailler avec <span className="font-semibold text-blue-700">@PrinceKouame</span> a été un vrai plaisir ! 🌟 Non seulement il a parfaitement exécuté notre vision, mais il a aussi proposé des améliorations pertinentes qui ont rendu le projet encore meilleur. <span className="text-blue-600">#WebDevelopment #Agri</span>
+        Travailler avec <span className="font-semibold text-blue-700">@AngenorKoffi</span> a été un vrai plaisir ! 🌟 Non seulement il a parfaitement exécuté notre vision, mais il a aussi proposé des améliorations pertinentes qui ont rendu le projet encore meilleur. <span className="text-blue-600">#WebDevelopment #Agri</span>
       </>
     ),
     comments: 18,
@@ -22,7 +22,7 @@ const testimonials = [
     date: "3j",
     message: (
       <>
-        Très satisfaite de la collaboration avec <span className="font-semibold text-blue-700">@PrinceKouame</span>. Il a su comprendre nos besoins et livrer un site moderne et performant. <span className="text-blue-600">#UX #Collaboration</span>
+        Très satisfaite de la collaboration avec <span className="font-semibold text-blue-700">@AngenorKoffi</span>. Il a su comprendre nos besoins et livrer un site moderne et performant. <span className="text-blue-600">#UX #Collaboration</span>
       </>
     ),
     comments: 12,
@@ -36,7 +36,7 @@ const testimonials = [
     date: "5j",
     message: (
       <>
-        Un développeur à l’écoute, force de proposition et très réactif. Je recommande vivement <span className="font-semibold text-blue-700">@PrinceKouame</span> pour tout projet digital. <span className="text-blue-600">#Design #Web</span>
+        Un développeur à l’écoute, force de proposition et très réactif. Je recommande vivement <span className="font-semibold text-blue-700">@AngenorKoffi</span> pour tout projet digital. <span className="text-blue-600">#Design #Web</span>
       </>
     ),
     comments: 9,
@@ -50,7 +50,7 @@ const testimonials = [
     date: "1 sem",
     message: (
       <>
-        Merci <span className="font-semibold text-blue-700">@PrinceKouame</span> pour ton professionnalisme et ta disponibilité. Le projet a été mené avec sérieux et efficacité. <span className="text-blue-600">#Pro #Satisfaction</span>
+        Merci <span className="font-semibold text-blue-700">@AngenorKoffi</span> pour ton professionnalisme et ta disponibilité. Le projet a été mené avec sérieux et efficacité. <span className="text-blue-600">#Pro #Satisfaction</span>
       </>
     ),
     comments: 15,
