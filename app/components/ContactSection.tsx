@@ -11,13 +11,13 @@ export default function ContactSection() {
     if (formRef.current) {
       emailjs
         .sendForm(
-          'service_n9v3jz3',
-          'template_9ar2y8e',
+          'service_n9v3jz3', // 🔁 Remplace avec ton vrai ID
+          'template_9ar2y8e', // 🔁 Ton template ID exact
           formRef.current,
-          'L2LP7ttx-Uz8xj2tb'
+          'L2LP7ttx-Uz8xj2tb' // 🔁 Ta clé publique EmailJS
         )
         .then(
-          (result) => {
+          () => {
             alert("Message envoyé avec succès !");
             setShowForm(false);
           },
@@ -109,6 +109,10 @@ export default function ContactSection() {
                   required
                 />
               </div>
+
+              {/* Champ caché pour le timestamp */}
+              <input type="hidden" name="time" value={new Date().toLocaleString()} />
+
               <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition text-lg mt-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10l9 6 9-6-9-6-9 6z" />
