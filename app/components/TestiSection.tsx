@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { FaCheckCircle, FaComment, FaRetweet, FaHeart, FaShareAlt } from "react-icons/fa";
 
 const testimonials = [
@@ -82,10 +83,12 @@ export default function TestimonialsSection() {
                 className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-w-[340px] max-w-[380px] flex flex-col gap-4 items-start"
               >
                 <div className="flex items-center gap-4 w-full">
-                  <img
+                  <Image
                     src={t.avatar}
                     alt={t.name}
-                    className="w-14 h-14 rounded-full object-cover border border-gray-200 dark:border-gray-700"
+                    width={56}
+                    height={56}
+                    className="rounded-full object-cover border border-gray-200 dark:border-gray-700"
                   />
                   <div>
                     <div className="flex items-center gap-2">
