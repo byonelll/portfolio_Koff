@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 
 export default function ContactSection() {
   const [showForm, setShowForm] = useState(false);
+  const [successMsg, setSuccessMsg] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,22 +12,26 @@ export default function ContactSection() {
     if (formRef.current) {
       emailjs
         .sendForm(
-          'service_n9v3jz3', // 🔁 Remplace avec ton vrai ID
-          'template_9ar2y8e', // 🔁 Ton template ID exact
+          'service_n9v3jz3',
+          'template_9ar2y8e',
           formRef.current,
-          'L2LP7ttx-Uz8xj2tb' // 🔁 Ta clé publique EmailJS
+          'Dtlmen9tD2u7b9KV9'
         )
         .then(
           () => {
-            alert("Message envoyé avec succès !");
-            setShowForm(false);
+            setSuccessMsg("Votre message a bien été envoyé !");
+            formRef.current?.reset();
+            setTimeout(() => {
+              setShowForm(false);
+              setSuccessMsg("");
+            }, 2500);
           },
           (error) => {
-            alert("Erreur lors de l'envoi : " + error.text);
+            setSuccessMsg("Erreur lors de l'envoi : " + error.text);
           }
         );
     } else {
-      alert("Le formulaire n'est pas disponible.");
+      setSuccessMsg("Le formulaire n'est pas disponible.");
     }
   };
 
@@ -74,7 +79,7 @@ export default function ContactSection() {
                   type="text"
                   name="name"
                   placeholder="Votre nom"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -85,7 +90,7 @@ export default function ContactSection() {
                     type="email"
                     name="email"
                     placeholder="vous@exemple.com"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
@@ -95,7 +100,7 @@ export default function ContactSection() {
                     type="tel"
                     name="tel"
                     placeholder="Votre numéro"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
@@ -105,14 +110,16 @@ export default function ContactSection() {
                   name="message"
                   placeholder="Décrivez votre projet ou votre message ici..."
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 />
               </div>
-
-              {/* Champ caché pour le timestamp */}
               <input type="hidden" name="time" value={new Date().toLocaleString()} />
-
+              {successMsg && (
+                <div className="text-green-600 dark:text-green-400 text-center font-semibold mb-2">
+                  {successMsg}
+                </div>
+              )}
               <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition text-lg mt-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10l9 6 9-6-9-6-9 6z" />
