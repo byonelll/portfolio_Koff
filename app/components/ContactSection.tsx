@@ -1,7 +1,34 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 export default function ContactSection() {
   const [showForm, setShowForm] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          'service_n9v3jz3',
+          'template_9ar2y8e',
+          formRef.current,
+          'L2LP7ttx-Uz8xj2tb'
+        )
+        .then(
+          (result) => {
+            alert("Message envoyé avec succès !");
+            setShowForm(false);
+          },
+          (error) => {
+            alert("Erreur lors de l'envoi : " + error.text);
+          }
+        );
+    } else {
+      alert("Le formulaire n'est pas disponible.");
+    }
+  };
 
   return (
     <section id="contact" className="py-20 px-4 bg-gray-100 dark:bg-gray-900">
@@ -10,7 +37,7 @@ export default function ContactSection() {
           Contact
         </span>
         <br /> <br />
-        <h2 className="text-4xl font-bold mb-4 text-gray-900">Discutons de votre projet</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Discutons de votre projet</h2>
         <p className="mb-8 text-gray-700 dark:text-gray-300">
           Vous avez un projet en tête ? Je serais ravi d’en discuter avec vous et de voir comment je peux vous aider à le réaliser. <br />
           Je réponds généralement dans les plus brefs délais
@@ -40,24 +67,47 @@ export default function ContactSection() {
             </button>
             <h2 className="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">On prend contact ?</h2>
             <p className="text-center text-gray-500 mb-8">Je réponds généralement dans les plus brefs délais</p>
-            <form className="space-y-6">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
               <div>
                 <label className="block text-left font-semibold mb-1 text-gray-700 dark:text-gray-200">Nom complet</label>
-                <input type="text" placeholder="Votre nom" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Votre nom"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
               </div>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1">
                   <label className="block text-left font-semibold mb-1 text-gray-700 dark:text-gray-200">Adresse email</label>
-                  <input type="email" placeholder="vous@exemple.com" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="vous@exemple.com"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
                 </div>
                 <div className="flex-1">
                   <label className="block text-left font-semibold mb-1 text-gray-700 dark:text-gray-200">Téléphone</label>
-                  <input type="tel" placeholder="Votre numéro" className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input
+                    type="tel"
+                    name="tel"
+                    placeholder="Votre numéro"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
                 </div>
               </div>
               <div>
                 <label className="block text-left font-semibold mb-1 text-gray-700 dark:text-gray-200">Message</label>
-                <textarea placeholder="Décrivez votre projet ou votre message ici..." rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+                <textarea
+                  name="message"
+                  placeholder="Décrivez votre projet ou votre message ici..."
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
               </div>
               <button type="submit" className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition text-lg mt-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
