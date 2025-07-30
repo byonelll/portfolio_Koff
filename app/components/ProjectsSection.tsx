@@ -127,9 +127,7 @@ export default function ProjectsSection() {
                 </div>
                 <span className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">
                   Voir les images
-                </span> <span className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">
-                  <a href="https://associationfes.vercel.app">Démo</a>
-                </span>
+                </span> 
               </div>
             </div>
           ))}
