@@ -37,6 +37,19 @@ const projects: Project[] = [
     ],
     demo: "#",
   },
+  {
+  title: "AssoFès – Plateforme des associations étudiantes",
+  description:
+    "Application web minimaliste centralisant les informations des associations étudiantes de Fès. ",
+  tags: ["Associations", "React", "Next.js", "TypeScript", "Vercel", "TailwindCSS", "JSON"],
+  images: [
+    "/projects/asso1.png",
+    "/projects/asso2.png",
+    "/projects/asso3.png",
+  ],
+  demo: "https://associationfes.vercel.app",
+}
+
 ];
 
 export default function ProjectsSection() {
