@@ -38,18 +38,29 @@ const projects: Project[] = [
     demo: "#",
   },
   {
-  title: "AssoFès – Plateforme des associations étudiantes",
-  description:
-    "Application web minimaliste centralisant les informations des associations étudiantes de Fès. ",
-  tags: ["Associations", "React", "Next.js", "TypeScript", "Vercel", "TailwindCSS", "JSON"],
-  images: [
-    "/projects/asso1.png",
-    "/projects/asso2.png",
-    "/projects/asso3.png",
-  ],
-  demo: "https://associationfes.vercel.app",
-}
-
+    title: "AssoFès – Plateforme des associations étudiantes",
+    description:
+      "Application web minimaliste centralisant les informations des associations étudiantes de Fès. ",
+    tags: ["Associations", "React", "Next.js", "TypeScript", "Vercel", "TailwindCSS", "JSON"],
+    images: [
+      "/projects/asso1.png",
+      "/projects/asso2.png",
+      "/projects/asso3.png",
+    ],
+    demo: "https://associationfes.vercel.app",
+  },
+  {
+    title: "Aura Studio – Services photo & vidéo au Maroc",
+    description:
+      "Landing page professionnelle pour proposer des prestations de photographie, vidéo et montage pour événements partout au Maroc. QR code intégré pour réservation directe via WhatsApp.",
+    tags: ["Photographie", "Vidéo", "Next.js", "TailwindCSS", "TypeScript", "Vercel", "Marketing"],
+    images: [
+      "/projects/studio1.png",
+      "/projects/studio2.png",
+      "/projects/studio3.png",
+    ],
+    demo: "https://auravisuelle.vercel.app",
+  }
 ];
 
 export default function ProjectsSection() {
@@ -80,6 +91,10 @@ export default function ProjectsSection() {
     );
   };
 
+  // Pour savoir si un projet doit ouvrir le lien demo directement
+  const isDirectDemo = (project: Project) =>
+    project.title.includes("AssoFès") || project.title.includes("Aura Studio");
+
   return (
     <section id="projects" className="py-24 px-4 bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto">
@@ -91,7 +106,7 @@ export default function ProjectsSection() {
           <br />
           <h2 className="text-4xl font-bold mb-2">Découvrez mes réalisations</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Une sélection de projets sur lesquels j&apos;ai travaillé. Cliquez sur les cartes pour voir les images.
+            Une sélection de projets sur lesquels j&apos;ai travaillé. Cliquez sur les cartes pour voir les images ou accéder à la démo.
           </p>
         </div>
 
@@ -99,7 +114,6 @@ export default function ProjectsSection() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              onClick={() => openModal(project)}
               className="bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-xl border border-gray-100 dark:border-gray-800 transition group cursor-pointer"
             >
               <div className="h-40 w-full relative rounded-t-xl overflow-hidden">
@@ -125,9 +139,23 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">
-                  Voir les images
-                </span> 
+                {isDirectDemo(project) ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
+                  >
+                    Voir la démo
+                  </a>
+                ) : (
+                  <span
+                    className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline cursor-pointer"
+                    onClick={() => openModal(project)}
+                  >
+                    Voir les images
+                  </span>
+                )}
               </div>
             </div>
           ))}
@@ -135,8 +163,12 @@ export default function ProjectsSection() {
 
         <div className="flex justify-center mt-10">
           <a
-            href="/projets"
+            href="#projects"
             className="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+            onClick={e => {
+              e.preventDefault();
+              window.scrollTo({ top: document.getElementById('projects')?.offsetTop || 0, behavior: 'smooth' });
+            }}
           >
             Voir tous les projets
           </a>
