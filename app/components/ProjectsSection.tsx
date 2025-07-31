@@ -52,7 +52,7 @@ const projects: Project[] = [
   {
     title: "Aura Studio – Services photo & vidéo au Maroc",
     description:
-      "Landing page professionnelle pour proposer des prestations de photographie, vidéo et montage pour événements partout au Maroc. QR code intégré pour réservation directe via WhatsApp.",
+      "Landing page professionnelle pour proposer des prestations de photographie, vidéo et montage pour événements partout au Maroc. ",
     tags: ["Photographie", "Vidéo", "Next.js", "TailwindCSS", "TypeScript", "Vercel", "Marketing"],
     images: [
       "/projects/studio1.png",
@@ -220,3 +220,4 @@ export default function ProjectsSection() {
     </section>
   );
 }
+
