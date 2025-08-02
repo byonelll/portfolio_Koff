@@ -81,6 +81,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" >
+       <head>
+        {/* ...autres balises... */}
+       <meta name="google-site-verification" content="MMAGG2VBouwZWUI1mLZe6kJMEBflMNZQz1EVxiSafDg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-black dark:text-white transition-colors duration-300`}
       >
