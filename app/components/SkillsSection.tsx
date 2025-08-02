@@ -121,12 +121,14 @@ function GitHubActivity() {
 
 export default function SkillsSection() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900 py-16 text-gray-800 dark:text-gray-100">
+    <section id="skills" className="bg-gray-50 dark:bg-gray-900 py-16 text-gray-800 dark:text-gray-100">
       <div className="max-w-7xl mx-auto px-2 sm:px-4">
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Welcome to my universe</h1>
+          <h2 className="text-3xl sm:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">
+            Compétences techniques et humaines – Développeur web Maroc
+          </h2>
           <p className="text-base sm:text-lg text-gray-500 dark:text-gray-300">
-            Quelques statistiques pour vous donner un aperçu de mon profil.
+            Découvrez mes compétences en développement web, ingénierie logicielle, frameworks modernes, gestion de projet et soft skills. <span className="sr-only">React, Next.js, Node.js, TypeScript, communication, leadership, Maroc</span>
           </p>
         </div>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2">

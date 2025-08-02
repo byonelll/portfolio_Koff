@@ -1,8 +1,7 @@
 'use client';
 
-import React from "react";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 type Project = {
   title: string;
@@ -40,7 +39,7 @@ const projects: Project[] = [
   {
     title: "AssoFès – Plateforme des associations étudiantes",
     description:
-      "Application web minimaliste centralisant les informations des associations étudiantes de Fès. ",
+      "Application web minimaliste centralisant les informations des associations étudiantes de Fès.",
     tags: ["Associations", "React", "Next.js", "TypeScript", "Vercel", "TailwindCSS", "JSON"],
     images: [
       "/projects/asso1.png",
@@ -52,7 +51,7 @@ const projects: Project[] = [
   {
     title: "Aura Studio – Services photo & vidéo au Maroc",
     description:
-      "Landing page professionnelle pour proposer des prestations de photographie, vidéo et montage pour événements partout au Maroc. ",
+      "Landing page professionnelle pour proposer des prestations de photographie, vidéo et montage pour événements partout au Maroc.",
     tags: ["Photographie", "Vidéo", "Next.js", "TailwindCSS", "TypeScript", "Vercel", "Marketing"],
     images: [
       "/projects/studio1.png",
@@ -99,14 +98,9 @@ export default function ProjectsSection() {
     <section id="projects" className="py-24 px-4 bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <span className="bg-gray-900 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
-            Projets
-          </span>
-          <br />
-          <br />
-          <h2 className="text-4xl font-bold mb-2">Découvrez mes réalisations</h2>
+          <h2 className="text-4xl font-bold mb-2">Découvrez mes réalisations web et mobile</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Une sélection de projets sur lesquels j&apos;ai travaillé. Cliquez sur les cartes pour voir les images ou accéder à la démo.
+            Une sélection de projets sur lesquels j&apos;ai travaillé : e-commerce, plateformes, landing pages, applications web et mobile. <span className="sr-only">React, Next.js, Node.js, Tailwind CSS, TypeScript, Maroc, développeur web</span>
           </p>
         </div>
 
@@ -119,7 +113,7 @@ export default function ProjectsSection() {
               <div className="h-40 w-full relative rounded-t-xl overflow-hidden">
                 <Image
                   src={project.images[0]}
-                  alt={project.title}
+                  alt={`Image principale du projet ${project.title}`}
                   fill
                   className="object-cover group-hover:scale-105 transition"
                 />
@@ -145,6 +139,7 @@ export default function ProjectsSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline"
+                    aria-label={`Voir la démo du projet ${project.title}`}
                   >
                     Voir la démo
                   </a>
@@ -152,6 +147,7 @@ export default function ProjectsSection() {
                   <span
                     className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline cursor-pointer"
                     onClick={() => openModal(project)}
+                    aria-label={`Voir les images du projet ${project.title}`}
                   >
                     Voir les images
                   </span>
@@ -189,7 +185,7 @@ export default function ProjectsSection() {
             <div className="relative w-full h-64 mb-4">
               <Image
                 src={activeProject.images[currentImage]}
-                alt="Preview"
+                alt={`Image ${currentImage + 1} du projet ${activeProject.title}`}
                 fill
                 className="object-contain rounded"
               />
@@ -211,6 +207,7 @@ export default function ProjectsSection() {
             <button
               onClick={closeModal}
               className="absolute top-2 right-2 text-xl font-bold text-gray-500 hover:text-red-500"
+              aria-label="Fermer la galerie d'images"
             >
               ×
             </button>
@@ -220,4 +217,3 @@ export default function ProjectsSection() {
     </section>
   );
 }
-

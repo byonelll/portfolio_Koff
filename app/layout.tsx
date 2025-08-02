@@ -14,52 +14,56 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Angenor Koffi- Un partenaire professionnel et dévoué pour concrétiser vos projets',
+  title: "Angenor Koffi – Un partenaire professionnel et dévoué pour concrétiser vos projets",
   description:
-    'Welcome to my portfolio! I am a passionate full-stack developer who bridges the gap between frontend and backend development. Specializing in creating complete web solutions, from beautiful user interfaces to robust server architectures.',
+    "Bienvenue sur mon portfolio ! Je suis un développeur full-stack passionné, spécialisé dans la création de solutions web complètes, du design d’interface à l’architecture serveur robuste. Découvrez mes réalisations et compétences techniques.",
   keywords: [
-    'Full-Stack Developer',
-    'Software Engineer',
-    'Frontend Development',
-    'Backend Development',
-    'React',
-    'Next.js',
-    'Node.js',
-    'TypeScript',
-    'Database Design',
-    'API Development',
-    'Cloud Solutions',
-    'DevOps',
-    'System Architecture',
-    'Web Development',
-    'Angenor Koffi',
+    "Développeur Full-Stack",
+    "Ingénieur Logiciel",
+    "Développement Frontend",
+    "Développement Backend",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "Conception de base de données",
+    "Développement d’API",
+    "Solutions Cloud",
+    "DevOps",
+    "Architecture Système",
+    "Développement Web",
+    "Angenor Koffi",
+    "Maroc",
+    "Portfolio",
+    "Web",
+    "Mobile"
   ],
-  authors: [{ name: 'Angenor Koffi' }],
-  creator: 'Angenor Koffi',
+  authors: [{ name: "Angenor Koffi" }],
+  creator: "Angenor Koffi",
   openGraph: {
-    title: 'Angenor Koffi - Ingénieur Informatique',
+    title: "Angenor Koffi – Ingénieur Informatique & Développeur Web au Maroc",
     description:
-      'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
-    url: 'https://your-domain.com',
-    siteName: 'Angenor Koffi- Portfolio',
+      "Développeur full-stack passionné, je réalise des solutions web complètes. Découvrez mes projets et mon expertise technique sur tout le cycle de développement.",
+    url: "https://angenorkoffi.vercel.app/",
+    siteName: "Angenor Koffi – Portfolio",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "https://angenorkoffi.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Angenor Koffi - Ingénieur Informatique Portfolio',
+        alt: "Angenor Koffi - Ingénieur Informatique Portfolio",
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "fr_FR",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Angenor Koffi- Ingénieur Informatique',
+    card: "summary_large_image",
+    title: "Angenor Koffi – Ingénieur Informatique & Développeur Web au Maroc",
     description:
-      'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
-    creator: '@yourusername',
-    images: ['/og-image.jpg'],
+      "Développeur full-stack passionné, je réalise des solutions web complètes. Découvrez mes projets et mon expertise technique sur tout le cycle de développement.",
+    creator: "@angenorkoffi",
+    images: ["https://angenorkoffi.vercel.app/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -67,9 +71,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -81,10 +85,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" >
-       <head>
-        {/* ...autres balises... */}
-       <meta name="google-site-verification" content="MMAGG2VBouwZWUI1mLZe6kJMEBflMNZQz1EVxiSafDg" />
-      </head>
+      <head>
+  <title>Angenor Koffi | Portfolio développeur web Maroc</title>
+  <meta name="description" content="Portfolio d'Angenor Koffi, ingénieur logiciel, développeur web et mobile au Maroc. Découvrez mes projets, compétences et contactez-moi." />
+  <meta name="keywords" content="Angenor Koffi, développeur, Maroc, portfolio, web, mobile, ingénieur, Next.js, React, Node.js" />
+  <meta name="author" content="Angenor Koffi" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Angenor Koffi | Portfolio développeur web Maroc" />
+  <meta property="og:description" content="Portfolio d'Angenor Koffi, ingénieur logiciel, développeur web et mobile au Maroc." />
+  <meta property="og:url" content="https://angenorkoffi.vercel.app/" />
+  <meta property="og:image" content="https://angenorkoffi.vercel.app/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Angenor Koffi | Portfolio développeur web Maroc" />
+  <meta name="twitter:description" content="Portfolio d'Angenor Koffi, ingénieur logiciel, développeur web et mobile au Maroc." />
+  <meta name="twitter:image" content="https://angenorkoffi.vercel.app/og-image.jpg" />
+  <meta name="google-site-verification" content="MMAGG2VBouwZWUI1mLZe6kJMEBflMNZQz1EVxiSafDg" />
+ 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LWJ9B2T1S4"></script>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LWJ9B2T1S4');
+      `,
+    }}
+  />
+</head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900 dark:bg-black dark:text-white transition-colors duration-300`}
       >

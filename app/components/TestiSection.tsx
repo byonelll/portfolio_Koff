@@ -64,28 +64,32 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 px-4 bg-gray-50 dark:bg-gray-900" id="testimonials" aria-label="Témoignages clients développeur web Maroc">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <span className="bg-gray-900 dark:bg-gray-800 text-white px-6 py-2 rounded-full mb-6 text-lg font-semibold shadow">
           Témoignages
         </span>
-        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Ce qu&apos;ils en pensent</h2>
+        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+          Ce qu&apos;ils en pensent – Avis clients et partenaires
+        </h2>
         <p className="text-xl text-gray-500 dark:text-gray-300 text-center mb-16 max-w-2xl">
           Quelques retours d&apos;expérience de mes clients et partenaires. Leur satisfaction est ma plus grande récompense et témoigne de mon engagement à délivrer des solutions de qualité.
+          <span className="sr-only">Témoignages développeur web Maroc, avis clients, Next.js, React, ingénieur logiciel</span>
         </p>
 
         {/* Carrousel défilant */}
         <div className="w-full overflow-x-auto pb-4">
           <div className="flex gap-8 w-max">
             {testimonials.map((t, i) => (
-              <div
+              <article
                 key={i}
                 className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-w-[340px] max-w-[380px] flex flex-col gap-4 items-start"
+                aria-label={`Témoignage de ${t.name} (${t.username})`}
               >
                 <div className="flex items-center gap-4 w-full">
                   <Image
                     src={t.avatar}
-                    alt={t.name}
+                    alt={`Photo de ${t.name}, client satisfait du développeur web Maroc`}
                     width={56}
                     height={56}
                     className="rounded-full object-cover border border-gray-200 dark:border-gray-700"
@@ -93,7 +97,7 @@ export default function TestimonialsSection() {
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-lg dark:text-white">{t.name}</span>
-                      <FaCheckCircle className="text-blue-500" />
+                      <FaCheckCircle className="text-blue-500" aria-label="Client vérifié" />
                     </div>
                     <span className="text-gray-500 dark:text-gray-300">{t.username}</span>
                   </div>
@@ -101,12 +105,12 @@ export default function TestimonialsSection() {
                 </div>
                 <div className="text-gray-800 dark:text-gray-100 text-lg">{t.message}</div>
                 <div className="flex items-center gap-8 mt-2 text-gray-400 dark:text-gray-300 text-base w-full">
-                  <span className="flex items-center gap-2"><FaComment /> {t.comments}</span>
-                  <span className="flex items-center gap-2"><FaRetweet /> {t.retweets}</span>
-                  <span className="flex items-center gap-2"><FaHeart /> {t.likes}</span>
-                  <span className="flex items-center gap-2 ml-auto"><FaShareAlt /></span>
+                  <span className="flex items-center gap-2"><FaComment aria-label="Commentaires" /> {t.comments}</span>
+                  <span className="flex items-center gap-2"><FaRetweet aria-label="Retweets" /> {t.retweets}</span>
+                  <span className="flex items-center gap-2"><FaHeart aria-label="Likes" /> {t.likes}</span>
+                  <span className="flex items-center gap-2 ml-auto"><FaShareAlt aria-label="Partager" /></span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
