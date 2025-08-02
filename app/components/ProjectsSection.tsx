@@ -25,6 +25,18 @@ const projects: Project[] = [
     demo: "#",
   },
   {
+  title: "Plateforme REIGM – Django",
+  description:
+    "Site web dédié au Réseau des Étudiants Ivoiriens du Gontougo au Maroc. Il permet la gestion des membres, la publication d’annonces, l’organisation d’événements, ainsi que la communication interne via un espace sécurisé. Interface moderne et responsive.",
+  tags: ["Association", "Django", "Python", "HTML/CSS", "Bootstrap", "SQLite", "Admin Panel"],
+  images: [
+    "/projects/reigm1.png",
+    "/projects/reigm2.png",
+    "/projects/reigm3.png",
+  ],
+  demo: "#",
+},
+  {
     title: "MoroccoLocks – Prise de rendez-vous (Laravel)",
     description:
       "Application de gestion de rendez-vous pour salon de coiffure. Réservation client, gestion de planning et notifications automatiques.",
