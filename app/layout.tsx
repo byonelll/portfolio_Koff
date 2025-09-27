@@ -96,6 +96,7 @@ export default function RootLayout({
   <meta property="og:description" content="Portfolio d'Angenor Koffi, ingénieur logiciel, développeur web et mobile au Maroc." />
   <meta property="og:url" content="https://angenorkoffi.vercel.app/" />
   <meta property="og:image" content="https://angenorkoffi.vercel.app/og-image.jpg" />
+  <meta name="yandex-verification" content="33ccc0d656fb90b2" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Angenor Koffi | Portfolio développeur web Maroc" />
