@@ -91,6 +91,7 @@ export default function RootLayout({
   <meta name="keywords" content="Angenor Koffi, développeur, Maroc, portfolio, web, mobile, ingénieur, Next.js, React, Node.js" />
   <meta name="author" content="Angenor Koffi" />
   <meta name="robots" content="index, follow" />
+  <meta name="msvalidate.01" content="8EA4766B41F6F32692AC813C53BBDD12" />
   <meta property="og:title" content="Angenor Koffi | Portfolio développeur web Maroc" />
   <meta property="og:description" content="Portfolio d'Angenor Koffi, ingénieur logiciel, développeur web et mobile au Maroc." />
   <meta property="og:url" content="https://angenorkoffi.vercel.app/" />
